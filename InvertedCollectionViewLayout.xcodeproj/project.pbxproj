@@ -15,9 +15,9 @@
 		693B55D61D1BED4C0065CAEE /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693B55D51D1BED4C0065CAEE /* CollectionViewCell.swift */; };
 		693B55D71D1BEEBD0065CAEE /* InvertedCollectionViewLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 693B55B31D1BEBB20065CAEE /* InvertedCollectionViewLayout.framework */; };
 		693B55D81D1BEEBD0065CAEE /* InvertedCollectionViewLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 693B55B31D1BEBB20065CAEE /* InvertedCollectionViewLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		69F19A721D1D7E170080BA4D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69F19A6F1D1D7E170080BA4D /* Info.plist */; };
-		69F19A731D1D7E170080BA4D /* InvertedCollectionLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 69F19A701D1D7E170080BA4D /* InvertedCollectionLayout.h */; };
-		69F19A741D1D7E170080BA4D /* InvertedCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F19A711D1D7E170080BA4D /* InvertedCollectionViewLayout.swift */; };
+		69F19A791D1D7F7A0080BA4D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69F19A761D1D7F7A0080BA4D /* Info.plist */; };
+		69F19A7A1D1D7F7A0080BA4D /* InvertedCollectionViewLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 69F19A771D1D7F7A0080BA4D /* InvertedCollectionViewLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		69F19A7B1D1D7F7A0080BA4D /* InvertedCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F19A781D1D7F7A0080BA4D /* InvertedCollectionViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,9 +54,9 @@
 		693B55CF1D1BEC020065CAEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		693B55D11D1BEC020065CAEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		693B55D51D1BED4C0065CAEE /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		69F19A6F1D1D7E170080BA4D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		69F19A701D1D7E170080BA4D /* InvertedCollectionLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvertedCollectionLayout.h; sourceTree = "<group>"; };
-		69F19A711D1D7E170080BA4D /* InvertedCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvertedCollectionViewLayout.swift; sourceTree = "<group>"; };
+		69F19A761D1D7F7A0080BA4D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69F19A771D1D7F7A0080BA4D /* InvertedCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvertedCollectionViewLayout.h; sourceTree = "<group>"; };
+		69F19A781D1D7F7A0080BA4D /* InvertedCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvertedCollectionViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +81,7 @@
 		693B55A91D1BEBB20065CAEE = {
 			isa = PBXGroup;
 			children = (
-				69F19A6E1D1D7E170080BA4D /* InvertedCollectionViewLayout */,
+				69F19A751D1D7F7A0080BA4D /* InvertedCollectionViewLayout */,
 				693B55C41D1BEC020065CAEE /* SampleApp */,
 				693B55B41D1BEBB20065CAEE /* Products */,
 				693B55BE1D1BEBF20065CAEE /* Sample App */,
@@ -118,12 +118,12 @@
 			path = SampleApp;
 			sourceTree = "<group>";
 		};
-		69F19A6E1D1D7E170080BA4D /* InvertedCollectionViewLayout */ = {
+		69F19A751D1D7F7A0080BA4D /* InvertedCollectionViewLayout */ = {
 			isa = PBXGroup;
 			children = (
-				69F19A6F1D1D7E170080BA4D /* Info.plist */,
-				69F19A701D1D7E170080BA4D /* InvertedCollectionLayout.h */,
-				69F19A711D1D7E170080BA4D /* InvertedCollectionViewLayout.swift */,
+				69F19A761D1D7F7A0080BA4D /* Info.plist */,
+				69F19A771D1D7F7A0080BA4D /* InvertedCollectionViewLayout.h */,
+				69F19A781D1D7F7A0080BA4D /* InvertedCollectionViewLayout.swift */,
 			);
 			path = InvertedCollectionViewLayout;
 			sourceTree = "<group>";
@@ -135,7 +135,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69F19A731D1D7E170080BA4D /* InvertedCollectionLayout.h in Headers */,
+				69F19A7A1D1D7F7A0080BA4D /* InvertedCollectionViewLayout.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69F19A721D1D7E170080BA4D /* Info.plist in Resources */,
+				69F19A791D1D7F7A0080BA4D /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,7 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69F19A741D1D7E170080BA4D /* InvertedCollectionViewLayout.swift in Sources */,
+				69F19A7B1D1D7F7A0080BA4D /* InvertedCollectionViewLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,7 +383,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = InvertedCollectionLayout/Info.plist;
+				INFOPLIST_FILE = InvertedCollectionViewLayout/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cillianok.InvertedCollectionLayout;
@@ -401,7 +401,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = InvertedCollectionLayout/Info.plist;
+				INFOPLIST_FILE = InvertedCollectionViewLayout/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cillianok.InvertedCollectionLayout;
