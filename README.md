@@ -11,16 +11,17 @@ In your UIViewController:
 
 1 - Set the Layout on the UICollectionView.
 
-```
+```swift
 let layout = InvertedCollectionViewLayout()
+
 layout.delegate = self
+
 collectionView.setCollectionViewLayout(layout, animated: false)
 ```
 
 2 - Implement the InvertedCollectionViewLayoutDelegate:
 
-```
-
+```swift
 extension ViewController: InvertedCollectionViewLayoutDelegate {
     
     func heightForItemAtIndexPath(indexPath: NSIndexPath) -> CGFloat {
