@@ -43,6 +43,7 @@ public class InvertedCollectionViewLayout: UICollectionViewLayout {
             for item in 0..<collectionView!.numberOfItemsInSection(0) {
                 
                 let indexPath = NSIndexPath(forItem: item, inSection: 0)
+                
                 let cellHeight = self.delegate.heightForItemAtIndexPath(indexPath)
                 
                 let insets = self.delegate.insets(indexPath)
@@ -67,6 +68,9 @@ public class InvertedCollectionViewLayout: UICollectionViewLayout {
     
     override public func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         
-        return cache.filter() { CGRectIntersectsRect($0.frame, rect) }
+        return cache.filter() {
+            
+            CGRectIntersectsRect($0.frame, rect)
+        }
     }
 }

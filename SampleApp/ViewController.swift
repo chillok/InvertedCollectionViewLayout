@@ -54,6 +54,6 @@ extension ViewController: InvertedCollectionViewLayoutDelegate {
     
     func insets(indexPath: NSIndexPath) -> UIEdgeInsets {
         
-        return UIEdgeInsets(top: 0, left: 5, bottom: 5, right: 5)
+        return UIEdgeInsets(top: 0, left: 0, bottom: 5, right: 0)
     }
 }
