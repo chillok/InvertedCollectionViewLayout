@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		693B55B71D1BEBB20065CAEE /* InvertedCollectionLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 693B55B61D1BEBB20065CAEE /* InvertedCollectionLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		693B55C61D1BEC020065CAEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693B55C51D1BEC020065CAEE /* AppDelegate.swift */; };
 		693B55C81D1BEC020065CAEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693B55C71D1BEC020065CAEE /* ViewController.swift */; };
 		693B55CB1D1BEC020065CAEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 693B55C91D1BEC020065CAEE /* Main.storyboard */; };
@@ -16,7 +15,9 @@
 		693B55D61D1BED4C0065CAEE /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693B55D51D1BED4C0065CAEE /* CollectionViewCell.swift */; };
 		693B55D71D1BEEBD0065CAEE /* InvertedCollectionViewLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 693B55B31D1BEBB20065CAEE /* InvertedCollectionViewLayout.framework */; };
 		693B55D81D1BEEBD0065CAEE /* InvertedCollectionViewLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 693B55B31D1BEBB20065CAEE /* InvertedCollectionViewLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		693B55DD1D1BEEDF0065CAEE /* InvertedCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693B55DC1D1BEEDF0065CAEE /* InvertedCollectionViewLayout.swift */; };
+		69F19A721D1D7E170080BA4D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69F19A6F1D1D7E170080BA4D /* Info.plist */; };
+		69F19A731D1D7E170080BA4D /* InvertedCollectionLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 69F19A701D1D7E170080BA4D /* InvertedCollectionLayout.h */; };
+		69F19A741D1D7E170080BA4D /* InvertedCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F19A711D1D7E170080BA4D /* InvertedCollectionViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +46,6 @@
 
 /* Begin PBXFileReference section */
 		693B55B31D1BEBB20065CAEE /* InvertedCollectionViewLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = InvertedCollectionViewLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		693B55B61D1BEBB20065CAEE /* InvertedCollectionLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InvertedCollectionLayout.h; sourceTree = "<group>"; };
-		693B55B81D1BEBB20065CAEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		693B55C31D1BEC020065CAEE /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		693B55C51D1BEC020065CAEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		693B55C71D1BEC020065CAEE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +54,9 @@
 		693B55CF1D1BEC020065CAEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		693B55D11D1BEC020065CAEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		693B55D51D1BED4C0065CAEE /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		693B55DC1D1BEEDF0065CAEE /* InvertedCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvertedCollectionViewLayout.swift; sourceTree = "<group>"; };
+		69F19A6F1D1D7E170080BA4D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69F19A701D1D7E170080BA4D /* InvertedCollectionLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvertedCollectionLayout.h; sourceTree = "<group>"; };
+		69F19A711D1D7E170080BA4D /* InvertedCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvertedCollectionViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +81,7 @@
 		693B55A91D1BEBB20065CAEE = {
 			isa = PBXGroup;
 			children = (
-				693B55B51D1BEBB20065CAEE /* InvertedCollectionLayout */,
+				69F19A6E1D1D7E170080BA4D /* InvertedCollectionViewLayout */,
 				693B55C41D1BEC020065CAEE /* SampleApp */,
 				693B55B41D1BEBB20065CAEE /* Products */,
 				693B55BE1D1BEBF20065CAEE /* Sample App */,
@@ -94,16 +95,6 @@
 				693B55C31D1BEC020065CAEE /* SampleApp.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		693B55B51D1BEBB20065CAEE /* InvertedCollectionLayout */ = {
-			isa = PBXGroup;
-			children = (
-				693B55B61D1BEBB20065CAEE /* InvertedCollectionLayout.h */,
-				693B55DC1D1BEEDF0065CAEE /* InvertedCollectionViewLayout.swift */,
-				693B55B81D1BEBB20065CAEE /* Info.plist */,
-			);
-			path = InvertedCollectionLayout;
 			sourceTree = "<group>";
 		};
 		693B55BE1D1BEBF20065CAEE /* Sample App */ = {
@@ -127,6 +118,16 @@
 			path = SampleApp;
 			sourceTree = "<group>";
 		};
+		69F19A6E1D1D7E170080BA4D /* InvertedCollectionViewLayout */ = {
+			isa = PBXGroup;
+			children = (
+				69F19A6F1D1D7E170080BA4D /* Info.plist */,
+				69F19A701D1D7E170080BA4D /* InvertedCollectionLayout.h */,
+				69F19A711D1D7E170080BA4D /* InvertedCollectionViewLayout.swift */,
+			);
+			path = InvertedCollectionViewLayout;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -134,7 +135,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				693B55B71D1BEBB20065CAEE /* InvertedCollectionLayout.h in Headers */,
+				69F19A731D1D7E170080BA4D /* InvertedCollectionLayout.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69F19A721D1D7E170080BA4D /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				693B55DD1D1BEEDF0065CAEE /* InvertedCollectionViewLayout.swift in Sources */,
+				69F19A741D1D7E170080BA4D /* InvertedCollectionViewLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
