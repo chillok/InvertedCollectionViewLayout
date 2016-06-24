@@ -15,7 +15,6 @@
 		693B55D61D1BED4C0065CAEE /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693B55D51D1BED4C0065CAEE /* CollectionViewCell.swift */; };
 		693B55D71D1BEEBD0065CAEE /* InvertedCollectionViewLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 693B55B31D1BEBB20065CAEE /* InvertedCollectionViewLayout.framework */; };
 		693B55D81D1BEEBD0065CAEE /* InvertedCollectionViewLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 693B55B31D1BEBB20065CAEE /* InvertedCollectionViewLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		69F19A791D1D7F7A0080BA4D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69F19A761D1D7F7A0080BA4D /* Info.plist */; };
 		69F19A7A1D1D7F7A0080BA4D /* InvertedCollectionViewLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 69F19A771D1D7F7A0080BA4D /* InvertedCollectionViewLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		69F19A7B1D1D7F7A0080BA4D /* InvertedCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F19A781D1D7F7A0080BA4D /* InvertedCollectionViewLayout.swift */; };
 /* End PBXBuildFile section */
@@ -221,7 +220,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69F19A791D1D7F7A0080BA4D /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
