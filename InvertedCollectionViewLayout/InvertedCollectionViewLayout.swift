@@ -39,8 +39,8 @@ public class InvertedCollectionViewLayout: UICollectionViewLayout {
         if cache.isEmpty {
             
             var yOffset: CGFloat = 0
-            
-            for item in 0..<collectionView!.numberOfItemsInSection(0) {
+
+            for item in (collectionView!.numberOfItemsInSection(0) - 1).stride(through: 0, by: -1) {
                 
                 let indexPath = NSIndexPath(forItem: item, inSection: 0)
                 
