@@ -17,8 +17,8 @@ import UIKit
 
 public protocol InvertedCollectionViewLayoutDelegate {
     
-    func heightForItemAtIndexPath(indexPath: NSIndexPath) -> CGFloat
-    func insets(indexPath: NSIndexPath) -> UIEdgeInsets
+    func collectionView(collectionView: UICollectionView, heightForItemAtIndexPath indexPath: NSIndexPath) -> CGFloat
+    func collectionView(collectionView: UICollectionView, insetsForItemAtIndexPath indexPath: NSIndexPath) -> UIEdgeInsets
 }
 
 public class InvertedCollectionViewLayout: UICollectionViewLayout {
@@ -44,9 +44,9 @@ public class InvertedCollectionViewLayout: UICollectionViewLayout {
                 
                 let indexPath = NSIndexPath(forItem: item, inSection: 0)
                 
-                let cellHeight = self.delegate.heightForItemAtIndexPath(indexPath)
+                let cellHeight = self.delegate.collectionView(collectionView!, heightForItemAtIndexPath: indexPath)
                 
-                let insets = self.delegate.insets(indexPath)
+                let insets = self.delegate.collectionView(collectionView!, insetsForItemAtIndexPath: indexPath)
                 
                 let frame = CGRect(x: CGFloat(0) + insets.left,
                                    y: yOffset + insets.top,

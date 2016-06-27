@@ -47,12 +47,12 @@ extension ViewController: UICollectionViewDataSource {
 
 extension ViewController: InvertedCollectionViewLayoutDelegate {
     
-    func heightForItemAtIndexPath(indexPath: NSIndexPath) -> CGFloat {
+    func collectionView(collectionView: UICollectionView, heightForItemAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
         return 100
     }
     
-    func insets(indexPath: NSIndexPath) -> UIEdgeInsets {
+    func collectionView(collectionView: UICollectionView, insetsForItemAtIndexPath indexPath: NSIndexPath) -> UIEdgeInsets {
         
         return UIEdgeInsets(top: 0, left: 0, bottom: 5, right: 0)
     }
