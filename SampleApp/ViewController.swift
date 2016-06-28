@@ -9,6 +9,13 @@
 import UIKit
 import InvertedCollectionViewLayout
 
+class Context: UICollectionViewLayoutInvalidationContext {
+    
+    override var invalidateDataSourceCounts: Bool {
+        return true
+    }
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
@@ -20,6 +27,15 @@ class ViewController: UIViewController {
         let layout = InvertedCollectionViewLayout()
         layout.delegate = self
         collectionView.setCollectionViewLayout(layout, animated: false)
+    }
+    
+    @IBAction func add() {
+        
+        self.count += 1
+        
+        let context = UICollectionViewLayoutInvalidationContext()
+        self.collectionView.collectionViewLayout.invalidateLayoutWithContext(context)
+        self.collectionView.reloadData()
     }
 }
 
@@ -40,6 +56,8 @@ extension ViewController: UICollectionViewDataSource {
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        print(count)
         
         return count
     }

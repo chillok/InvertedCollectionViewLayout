@@ -6,12 +6,6 @@
 //  Copyright © 2016 Cillian O'Keeffe. All rights reserved.
 //
 //
-//  InvertedCollectionViewLayout.swift
-//  InvertedCollectionViewLayout
-//
-//  Created by Cillian O'Keeffe on 23/06/2016.
-//  Copyright © 2016 Cillian O'Keeffe. All rights reserved.
-//
 
 import UIKit
 
@@ -34,18 +28,26 @@ public class InvertedCollectionViewLayout: UICollectionViewLayout {
         return CGSize(width: width, height: contentHeight)
     }
     
+    override public func invalidateLayoutWithContext(context: UICollectionViewLayoutInvalidationContext) {
+        super.invalidateLayoutWithContext(context)
+        
+        cache.removeAll()
+        contentHeight = 0
+    }
+    
     override public func prepareLayout() {
   
         if cache.isEmpty {
             
             var yOffset: CGFloat = 0
+            
+            print(collectionView!.numberOfItemsInSection(0))
 
             for item in (collectionView!.numberOfItemsInSection(0) - 1).stride(through: 0, by: -1) {
                 
                 let indexPath = NSIndexPath(forItem: item, inSection: 0)
                 
                 let cellHeight = self.delegate.collectionView(collectionView!, heightForItemAtIndexPath: indexPath)
-                
                 let insets = self.delegate.collectionView(collectionView!, insetsForItemAtIndexPath: indexPath)
                 
                 let frame = CGRect(x: CGFloat(0) + insets.left,
@@ -72,5 +74,10 @@ public class InvertedCollectionViewLayout: UICollectionViewLayout {
             
             CGRectIntersectsRect($0.frame, rect)
         }
+    }
+    
+    override public func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
+        
+        return self.cache[indexPath.row]
     }
 }
