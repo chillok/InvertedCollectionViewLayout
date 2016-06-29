@@ -19,7 +19,7 @@ class Context: UICollectionViewLayoutInvalidationContext {
 class ViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    var count = 10
+    var count = Array(0.stride(through: 10, by: 1))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,11 +31,11 @@ class ViewController: UIViewController {
     
     @IBAction func add() {
         
-        self.count += 1
+        self.count.insert(count[0]-1, atIndex: 0)
+        let indexPath = NSIndexPath(forItem: 0, inSection: 0)
         
-        let context = UICollectionViewLayoutInvalidationContext()
-        self.collectionView.collectionViewLayout.invalidateLayoutWithContext(context)
-        self.collectionView.reloadData()
+        self.collectionView.insertItemsAtIndexPaths([indexPath])
+        self.collectionView.scrollToItemAtIndexPath(indexPath, atScrollPosition: UICollectionViewScrollPosition.Bottom, animated: true)
     }
 }
 
@@ -45,7 +45,7 @@ extension ViewController: UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CellReuseIdentifier", forIndexPath: indexPath) as! CollectionViewCell
         
-        cell.label.text = "Cell \(indexPath.row)"
+        cell.label.text = "Cell \(count[indexPath.row])"
         
         return cell
     }
@@ -59,7 +59,7 @@ extension ViewController: UICollectionViewDataSource {
         
         print(count)
         
-        return count
+        return count.count
     }
 }
 
