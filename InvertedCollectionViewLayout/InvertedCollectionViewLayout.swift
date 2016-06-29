@@ -41,12 +41,14 @@ public class InvertedCollectionViewLayout: UICollectionViewLayout {
     }
     
     override public func prepareLayout() {
+        
+        let array = Array((collectionView!.numberOfItemsInSection(0) - 1).stride(through: 0, by: -1))
   
         if cache.isEmpty {
             
             var yOffset: CGFloat = 0
 
-            for item in (collectionView!.numberOfItemsInSection(0) - 1).stride(through: 0, by: -1) {
+            for item in array {
                 
                 let indexPath = NSIndexPath(forItem: item, inSection: 0)
                 
@@ -68,7 +70,7 @@ public class InvertedCollectionViewLayout: UICollectionViewLayout {
             }
         }
         
-        if isFirstLaunch {
+        if isFirstLaunch && !array.isEmpty {
             self.collectionView!.contentOffset = CGPoint(x: 0, y: contentHeight)
             isFirstLaunch = false
         }
