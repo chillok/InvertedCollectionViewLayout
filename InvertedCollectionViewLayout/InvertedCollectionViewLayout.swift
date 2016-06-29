@@ -19,9 +19,7 @@ public class InvertedCollectionViewLayout: UICollectionViewLayout {
     
     public var delegate: InvertedCollectionViewLayoutDelegate!
     
-    // MARK: - Private Variables
-    
-    private var hasBeenLayedOut = false
+    private var isFirstLaunch = true
     private var cache: [UICollectionViewLayoutAttributes] = []
     private var contentHeight: CGFloat = 0
     
@@ -30,15 +28,13 @@ public class InvertedCollectionViewLayout: UICollectionViewLayout {
         return CGRectGetWidth(collectionView!.bounds)
     }
     
-    // UICollectionViewLayout Overrides
-    
     override public func collectionViewContentSize() -> CGSize {
         
         return CGSize(width: width, height: contentHeight)
     }
     
-    override public func invalidateLayoutWithContext(context: UICollectionViewLayoutInvalidationContext) {
-        super.invalidateLayoutWithContext(context)
+    override public func invalidateLayout() {
+        super.invalidateLayout()
         
         cache.removeAll()
         contentHeight = 0
@@ -48,20 +44,19 @@ public class InvertedCollectionViewLayout: UICollectionViewLayout {
   
         if cache.isEmpty {
             
-            // the cell's origin offset on the yAxis
             var yOffset: CGFloat = 0
 
             for item in (collectionView!.numberOfItemsInSection(0) - 1).stride(through: 0, by: -1) {
                 
                 let indexPath = NSIndexPath(forItem: item, inSection: 0)
                 
-                let height = self.delegate.collectionView(collectionView!, heightForItemAtIndexPath: indexPath)
+                let cellHeight = self.delegate.collectionView(collectionView!, heightForItemAtIndexPath: indexPath)
                 let insets = self.delegate.collectionView(collectionView!, insetsForItemAtIndexPath: indexPath)
                 
-                let frame = CGRect(x: insets.left,
+                let frame = CGRect(x: CGFloat(0) + insets.left,
                                    y: yOffset + insets.top,
                                    width: width - insets.left - insets.right,
-                                   height: height)
+                                   height: cellHeight)
                 
                 let attributes = UICollectionViewLayoutAttributes(forCellWithIndexPath: indexPath)
                 attributes.frame = frame
@@ -69,13 +64,13 @@ public class InvertedCollectionViewLayout: UICollectionViewLayout {
                 
                 contentHeight = max(contentHeight, CGRectGetMaxY(frame))
                 
-                yOffset = yOffset + height + insets.top + insets.bottom
+                yOffset = yOffset + cellHeight + insets.top + insets.bottom
             }
         }
         
-        if !hasBeenLayedOut {
+        if !isFirstLaunch {
             self.collectionView!.contentOffset = CGPoint(x: 0, y: contentHeight)
-            hasBeenLayedOut = true
+            isFirstLaunch = false
         }
     }
     

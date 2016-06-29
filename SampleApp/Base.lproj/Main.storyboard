@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3t5-Wd-OrR">
-                                <rect key="frame" x="0.0" y="96" width="600" height="504"/>
+                                <rect key="frame" x="0.0" y="96" width="600" height="451"/>
                                 <collectionViewLayout key="collectionViewLayout" id="AwF-dc-QZ3"/>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellReuseIdentifier" id="C7I-Ff-GaX" customClass="CollectionViewCell" customModule="SampleApp" customModuleProvider="target">
@@ -68,18 +68,34 @@
                                     <action selector="add" destination="BYZ-38-t0r" eventType="touchUpInside" id="fFJ-1P-7qW"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1FO-H8-d8B">
+                                <rect key="frame" x="0.0" y="555" width="600" height="45"/>
+                                <color key="backgroundColor" red="0.95233956099999995" green="0.95233956099999995" blue="0.95233956099999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="W0I-5Y-UIe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="HPZ-n1-h6Q"/>
+                                </connections>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="3t5-Wd-OrR" secondAttribute="trailing" id="K7X-tM-Yak"/>
-                            <constraint firstItem="3t5-Wd-OrR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KNW-wK-ZkP"/>
+                            <constraint firstItem="3t5-Wd-OrR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="98w-Lr-whT"/>
+                            <constraint firstItem="1FO-H8-d8B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="JVk-Jj-YJo"/>
+                            <constraint firstItem="3t5-Wd-OrR" firstAttribute="top" secondItem="AEZ-vD-MQg" secondAttribute="bottom" constant="38" id="Mzz-HT-5Cr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3t5-Wd-OrR" secondAttribute="trailing" constant="-20" id="NFx-Kv-ch9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1FO-H8-d8B" secondAttribute="trailing" constant="-20" id="TDs-U0-niv"/>
                             <constraint firstItem="AEZ-vD-MQg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="bfJ-90-G8r"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3t5-Wd-OrR" secondAttribute="bottom" id="hT9-LB-Tqs"/>
                             <constraint firstItem="AEZ-vD-MQg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="iOd-rR-A82"/>
-                            <constraint firstItem="3t5-Wd-OrR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="96" id="mpa-vW-lMz"/>
+                            <constraint firstItem="1FO-H8-d8B" firstAttribute="top" secondItem="3t5-Wd-OrR" secondAttribute="bottom" constant="8" id="kbs-ZW-Wtj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1FO-H8-d8B" secondAttribute="bottom" id="oxg-jD-1kZ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomLayoutConstraint" destination="oxg-jD-1kZ" id="PX7-le-HME"/>
                         <outlet property="collectionView" destination="3t5-Wd-OrR" id="pYG-gT-eCU"/>
                     </connections>
                 </viewController>
