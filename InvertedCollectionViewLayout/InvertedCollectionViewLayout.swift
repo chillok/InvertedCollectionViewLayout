@@ -68,7 +68,7 @@ public class InvertedCollectionViewLayout: UICollectionViewLayout {
             }
         }
         
-        if !isFirstLaunch {
+        if isFirstLaunch {
             self.collectionView!.contentOffset = CGPoint(x: 0, y: contentHeight)
             isFirstLaunch = false
         }
